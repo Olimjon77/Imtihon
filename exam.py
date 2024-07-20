@@ -106,10 +106,16 @@ elif selected == "Loyiha":
         st.write(clean(df))
     # def loyiha():
     st.subheader(':bar_chart: Avtomobillar tahlili')
+
+    st.title("Outlierlarni ko'rish: ")
+    cols = ['year', 'selling_price', 'km_driven', 'max_power']
+    select_outliers = st.selectbox("## Nimaning outlierni ko'rmoqchisiz", (cols))
     fig, ax = plt.subplots(figsize=(10, 6))
-    sns.boxplot(data=df,  x="selling_price", ax=ax)
-    ax.set_xlabel("Selling Price")
+    sns.boxplot(data=df,  x=select_outliers, ax=ax)
+    ax.set_xlabel(select_outliers)
     st.pyplot(fig)
+
+    
     import plotly.express as px
 
 # Assuming df is your DataFrame
