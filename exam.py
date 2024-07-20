@@ -113,6 +113,7 @@ elif selected == "Loyiha":
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.boxplot(data=df,  x=select_outliers, ax=ax)
     ax.set_xlabel(select_outliers)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
     st.pyplot(fig)
 
     
