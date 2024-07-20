@@ -92,7 +92,7 @@ if selected == "Jadval Haqida":
     st.dataframe(df_selection)
     left, right= st.columns(2)
     with left:
-        st.write(f"#### Avtomobillarnig o'rtacha narxi\n ### {round(df_selection["selling_price"].mean())} $")
+        st.write(f"#### Avtomobillarning o'rtacha narxi\n ### {round(df_selection['selling_price'].mean())} $")
     with right:
         st.write(f"#### Avtomobillarnig o'rtacha probegi\n\n\n ### {round(df_selection["km_driven"].mean())} km")
 
