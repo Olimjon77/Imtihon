@@ -64,6 +64,7 @@ if selected == "Bosh Sahifa":
 # Jadval haqida
 
 if selected == "Jadval Haqida":
+    df = pd.read_csv("17.csv")
     st.write("## DataFrame haqida ")
     with st.expander("See dataframe"):
         st.write("## DataFrame")
